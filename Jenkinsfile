@@ -8,6 +8,11 @@ node{
        def gradle =  tool name: 'gradle', type: 'gradle'
        sh "${gradle}/bin/gradle build "
      }
+    
+     stage('Unit Testing'){
+       def gradle =  tool name: 'gradle', type: 'gradle'
+       sh "${gradle}/bin/gradle clean test"
+     }
     }
   catch (err){
    }
