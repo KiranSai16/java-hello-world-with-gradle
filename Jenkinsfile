@@ -21,9 +21,10 @@ node{
         sh "${gradle}/bin/gradle sonarqube"
        }
     }
-  catch (err){
    }
-  } 
-}
+   catch (err){
+   }
+ } 
+
       
       
