@@ -83,9 +83,9 @@ test.finalizedBy jacocoTestReport
 check.dependsOn jacocoTestCoverageVerification
 
 
-test {
-  useJUnitPlatform()
-}
+//test {
+//  useJUnitPlatform()
+//}
 // tag::wrapper[]
 //task wrapper(type: Wrapper) {
 //    gradleVersion = '3.5'
