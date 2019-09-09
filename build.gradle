@@ -41,12 +41,12 @@ repositories {
 }
 // end::repositories[]
 
-// tag::jar[]
+// tag::war[]
 war {
     baseName = 'jb-hello-world'
     version =  '0.1.0'
 }
-// end::jar[]
+// end::war[]
 
 // tag::dependencies[]
 sourceCompatibility = 1.7
