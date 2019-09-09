@@ -34,7 +34,10 @@ apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'war'
 apply plugin: 'jacoco'
-apply plugin: 'org.sonarqube.gradle.SonarQubePlugin'
+
+plugins {
+  id "org.sonarqube" version "2.7.1"
+}
 
 mainClassName = 'hello.HelloWorld'
 
