@@ -28,14 +28,6 @@ dependencies {
 }
 */
 
-buildscript {
-    repositories {
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies { classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.0.1" }
-}
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -49,9 +41,6 @@ mainClassName = 'hello.HelloWorld'
 // tag::repositories[]
 repositories {
     mavenCentral()
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
 }
 // end::repositories[]
 
