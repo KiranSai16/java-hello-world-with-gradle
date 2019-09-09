@@ -7,12 +7,12 @@ node{
      stage('Build Automation'){
        def gradle =  tool name: 'gradle', type: 'gradle'
        sh "${gradle}/bin/gradle clean build"
-       step( [ $class: 'JacocoPublisher',execPattern: '**/build/**/**.exec'] )
      }
     
      stage('Unit Testing'){
        def gradle =  tool name: 'gradle', type: 'gradle'
        sh "${gradle}/bin/gradle test jacoco"
+       step( [ $class: 'JacocoPublisher',execPattern: '**/build/**/**.exec'] )
      }
     }
   catch (err){
