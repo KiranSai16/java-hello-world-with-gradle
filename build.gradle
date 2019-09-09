@@ -44,6 +44,9 @@ mainClassName = 'hello.HelloWorld'
 // tag::repositories[]
 repositories {
     mavenCentral()
+    maven {
+            url "https://plugins.gradle.org/m2/"
+        }
 }
 // end::repositories[]
 
