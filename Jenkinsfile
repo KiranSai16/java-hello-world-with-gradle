@@ -11,7 +11,7 @@ node{
     
      stage('Unit Testing'){
        def gradle =  tool name: 'gradle', type: 'gradle'
-       sh "${gradle}/bin/gradle test jacoco"
+       sh "${gradle}/bin/gradle clean test"
        step( [ $class: 'JacocoPublisher',execPattern: '**/build/**/**.exec'] )
      }
     }
