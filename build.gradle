@@ -32,6 +32,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'war'
+apply plugin: 'jacoco'
 
 mainClassName = 'hello.HelloWorld'
 
@@ -58,6 +59,33 @@ dependencies {
 }
 // end::dependencies[]
 
+jacoco {
+  toolVersion = "0.8.2"
+}
+
+jacocoTestCoverageVerification {
+  violationRules {
+    rule {
+      element = 'CLASS'
+      includes = [
+          'io.reflectoring.coverage.part.PartlyCovered'
+      ]
+      limit {
+        counter = 'LINE'
+        value = 'COVEREDRATIO'
+        minimum = 0.8
+      }
+    }
+  }
+}
+
+test.finalizedBy jacocoTestReport
+check.dependsOn jacocoTestCoverageVerification
+
+
+test {
+  useJUnitPlatform()
+}
 // tag::wrapper[]
 //task wrapper(type: Wrapper) {
 //    gradleVersion = '3.5'
