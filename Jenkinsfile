@@ -5,11 +5,12 @@ node{
      }
      
      stage('Build Automation'){
-      sh "gradle build "
+       def gradle =  tool name: 'gradle', type: 'gradle'
+       sh "$gradle build "
      }
     }
   catch (err){
-  }
-   } 
+   }
+  } 
       
       
