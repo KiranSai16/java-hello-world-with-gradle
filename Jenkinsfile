@@ -8,7 +8,7 @@ node{
       sh "gradle build "
      }
     }
-  catch{
+  catch (err){
   }
    } 
       
