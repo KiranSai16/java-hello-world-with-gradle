@@ -8,6 +8,8 @@ node{
       sh "gradle build "
      }
     }
+  catch{
+  }
    } 
       
       
