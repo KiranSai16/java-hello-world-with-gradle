@@ -41,7 +41,7 @@ repositories {
 // end::repositories[]
 
 // tag::jar[]
-jar {
+war {
     baseName = 'jb-hello-world'
     version =  '0.1.0'
 }
