@@ -33,7 +33,7 @@ apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'war'
 apply plugin: 'jacoco'
-apply plugin: 'org.sonarqube'
+apply plugin: 'org.sonarqube.gradle.SonarQubePlugin'
 
 mainClassName = 'hello.HelloWorld'
 
@@ -62,6 +62,7 @@ dependencies {
     testCompile "junit:junit:4.12"
     classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1"
 }
+
 // end::dependencies[]
 
 jacoco {
