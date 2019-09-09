@@ -32,7 +32,7 @@ node{
      }
    }
    catch (err){
-     sh "echo "Pipeline aborted.""
+     sh "echo 'Pipeline aborted.'"
      
    }
  } 
