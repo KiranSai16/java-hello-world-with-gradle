@@ -6,7 +6,7 @@ node{
      
      stage('Build Automation'){
        def gradle =  tool name: 'gradle', type: 'gradle'
-       sh "${gradle} build "
+       sh "${gradle}/bin/gradle build "
      }
     }
   catch (err){
