@@ -1,3 +1,5 @@
+def props;
+
 node{
   try{
     stage('SCM Checkout'){
