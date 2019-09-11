@@ -3,8 +3,7 @@ def props;
 node{
   try{
     stage('SCM Checkout'){
-      props = readProperties  file: """pipeline.properties"""
-      git branch: ${props['branch']}, url: ${props['github_url']}
+      git branch: 'master', url: 'https://github.com/KiranSai16/java-hello-world-with-gradle/'
     }
      
      stage('Build Automation'){
