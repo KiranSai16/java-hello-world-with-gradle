@@ -18,7 +18,7 @@ node{
         //sh "${gradle}/bin/gradle sonarqube"
        //}
        def Sonarscanner = tool 'Sonarscanner';
-       sh "${Sonarscanner}/sonar-scanner"
+       sh "${Sonarscanner}/bin/sonar-scanner"
     }
     
     stage("QUALITY GATE"){  
