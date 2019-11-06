@@ -1,4 +1,4 @@
-def props;
+def prop
 
 node{
   try{
